@@ -24,3 +24,25 @@
 
 // 1 <= nums.length <= 500
 // 1 <= nums[i] <= 10^5
+
+
+
+
+class Solution {
+public:
+    int findNumbers(vector<int>& nums) {
+        int num, count, res=0;
+        for(int i=0; i<nums.size();++i){
+            num=nums[i];
+            count=0;
+            while (num!=0){
+                num=num/10;
+                count++;
+            }
+            if(count%2==0){
+                res++;
+            }
+        }
+        return(res);
+    }
+};
